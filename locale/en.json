@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Mood & hormones",
+    "description": "A physiology-like mood engine: seven hormones drift with the time of day, conversation, and tool outcomes. The state reaches every request and appears in a panel below the composer."
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "name": "dsh-emotion-engine",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A physiology-like mood engine for DeepSeek Harness: seven hormones, a circadian baseline, social events, a live mood context for the agent, and a mood panel below the composer.",
+  "icon": "assets/icon-256.png",
+  "author": "OrdinaryTu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OrdinaryTu/dsh-emotion-engine.git"
+  },
+  "homepage": "https://github.com/OrdinaryTu/dsh-emotion-engine",
+  "bugs": {
+    "url": "https://github.com/OrdinaryTu/dsh-emotion-engine/issues"
+  },
+  "type": "module",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "engine.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "assets/*.png",
+    "LICENSE",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.2-rc.1 <0.3.0-0"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "emotion",
+    "mood",
+    "hormones",
+    "companion"
+  ],
+  "license": "MIT"
+}
